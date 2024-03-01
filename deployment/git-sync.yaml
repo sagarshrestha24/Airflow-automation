@@ -1,0 +1,11 @@
+dags:
+  gitSync:
+    enabled: true
+    repo:  ## you repo name where dag files are preset eg: git@github.com:code-shivy/Airflow-Dags.git
+    branch: ## branch name       
+    subPath: ""
+    sshKeySecret: airflow-ssh-secrets
+extraSecrets:
+  airflow-ssh-secrets:
+    data: |
+      gitSshKey: ## your git ssh key value
