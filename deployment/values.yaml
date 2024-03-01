@@ -11,7 +11,7 @@ airflow:
   image:
     repository: apache/airflow
     tag: 2.6.3-python3.9
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     pullSecret: ""
     uid: 50000
     gid: 0
@@ -1372,7 +1372,7 @@ dags:
     image:
       repository: registry.k8s.io/git-sync/git-sync
       tag: v3.6.5
-      pullPolicy: IfNotPresent
+      pullPolicy: Always
       uid: 65533
       gid: 65533
 
@@ -1709,7 +1709,7 @@ pgbouncer:
   image:
     repository: ghcr.io/airflow-helm/pgbouncer
     tag: 1.18.0-patch.1
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     uid: 1001
     gid: 1001
 
@@ -1903,7 +1903,7 @@ postgresql:
     registry: ghcr.io
     repository: airflow-helm/postgresql-bitnami
     tag: 11.16-patch.0
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
 
   ## the postgres database to use
   ##
@@ -2045,7 +2045,7 @@ redis:
     registry: docker.io
     repository: bitnami/redis
     tag: 5.0.14-debian-10-r173
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
 
   ## the redis password
   ##
